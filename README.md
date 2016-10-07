@@ -78,72 +78,71 @@ s = ''
 a = [0.333033, 0.326189, 0.0332124, 0.388094, 0.326704, 0.0154539, 0.322883, 0.0270275, 0.0150091, 0.443235, 0.362946, 0.027745, 0.430879, 0.443824, 0.0277048, 0.330736, 0.0290668, 0.0133217, 0.376686, 0.0123277, 0.00931546, 0.446231, 0.397617, 0.0162406, 0.447861, 0.0050071, 0.0109479, 0.389289, 0.0271959, 0.0138626, 0.32109, 0.0268736, 0.0129828, 0.401142, 0.326009, 0.0303488, 0.379368, 0.0229494, 0.0134011, 0.318115, 0.346288, 0.017666, 0.333818, 0.326769, 0.0141554, 0.341832, 0.0291055, 0.0153984, 0.446665, 0.399975, 0.024566, 0.316297, 0.0159851, 0.010876, 0.428384, 0.444201, 0.0214323, 0.376211, 0.00628675, 0.0105036, 0.44565, 0.0195615, 0.012549, 0.445242, 0.366523, 0.0225733, 0.324775, 0.0192127, 0.0134437, 0.318991, 0.381386, 0.0149852, 0.00882163, 0.447015]
 for i in a:
 	if i > 0.1:
-			s +='1'
-				else:
-						s +='0'
-						print s		
-								</pre>
-								<pre>
-								python test.py 
-								 11011010011011010010011010010010011010011011010011010011010010011010011001
-								 </pre> 
-								  
-								 ![](http://image.3001.net/images/20160907/14732283689846.png)
+		s +='1'
+	else:
+		s +='0'
+print s		
+		</pre>
+<pre>
+python test.py 
+ 11011010011011010010011010010010011010011011010011010011010010011010011001
+</pre> 
+ 
+![](http://image.3001.net/images/20160907/14732283689846.png)
 
-								 <pre>
-								 pip install bitstring
-								 </pre>
+<pre>
+pip install bitstring
+</pre>
 
-								 <pre>
-								 python
-								 import bitstring
+<pre>
+python
+import bitstring
 
-								 bitstring.BitArray(bin='11011010011011010010011010010010011010011011010011010011010010011010011001').tobytes()
-								 </pre>		
+bitstring.BitArray(bin='11011010011011010010011010010010011010011011010011010011010010011010011001').tobytes()
+</pre>		
 
-								 ![](http://image.3001.net/images/20160928/14750512374959.png)
-								 [Automated RF/SDR Signal Analysis [Reverse Engineering]](https://github.com/tresacton/dspectrum)
-								 <pre>
-								 Payload : formatted hexcode
-								 \x36\x9b\x49\xa4\x9a\x6d\x34\xd2\x69\x9
-								 </pre>
-								 thanks for tresacton‘s help [GitHub](https://github.com/tresacton/dspectrum/issues/1)
+![](http://image.3001.net/images/20160928/14750512374959.png)
+[Automated RF/SDR Signal Analysis [Reverse Engineering]](https://github.com/tresacton/dspectrum)
+<pre>
+Payload : formatted hexcode
+\x36\x9b\x49\xa4\x9a\x6d\x34\xd2\x69\x9
+</pre>
+thanks for tresacton‘s help [GitHub](https://github.com/tresacton/dspectrum/issues/1)
 ### 0x05 Hacking The world with watch
-								 德州仪器生产的EZ430 Chronos手表由于采用了MSP430芯片，该芯片支持发射1GHz以下频率的无线信号,覆盖市面上各种常见的无线遥控频率（315MHz、433MHz、868MHz、915MHz）:
-								 ![](http://image.3001.net/images/20160907/14732312105191.png)
+德州仪器生产的EZ430 Chronos手表由于采用了MSP430芯片，该芯片支持发射1GHz以下频率的无线信号,覆盖市面上各种常见的无线遥控频率（315MHz、433MHz、868MHz、915MHz）:
+![](http://image.3001.net/images/20160907/14732312105191.png)
 #### 5.1 开发环境搭建
-								 到 TI德州仪器官网下载：(需注册账号)
-	CCS studio (Code Composer Studio ):[http://processors.wiki.ti.com/index.php/Download_CCS](http://processors.wiki.ti.com/index.php/Download_CCS)
+到 TI德州仪器官网下载：(需注册账号)
+CCS studio (Code Composer Studio ):[http://processors.wiki.ti.com/index.php/Download_CCS](http://processors.wiki.ti.com/index.php/Download_CCS)
 
-					    FET-Pro430-Lite程序:[http://www.elprotronic.com/download.html](http://www.elprotronic.com/download.html)
+FET-Pro430-Lite程序:[http://www.elprotronic.com/download.html](http://www.elprotronic.com/download.html)
 
-					    SmartRF Studio : [http://www.ti.com.cn/tool/cn/smartrftm-studio](http://www.ti.com.cn/tool/cn/smartrftm-studio)
+SmartRF Studio : [http://www.ti.com.cn/tool/cn/smartrftm-studio](http://www.ti.com.cn/tool/cn/smartrftm-studio)
 
-					    以及GitHub上面的 miChronos项目代码：[http://github.com/jackokring/miChronos](http://github.com/jackokring/miChronos)
+以及GitHub上面的 miChronos项目代码：[http://github.com/jackokring/miChronos](http://github.com/jackokring/miChronos)
 
-					    百度网盘：[https://pan.baidu.com/s/1hsse2Ni](https://pan.baidu.com/s/1hsse2Ni)
+百度网盘：[https://pan.baidu.com/s/1hsse2Ni](https://pan.baidu.com/s/1hsse2Ni)
 
-					    windows 7如果不是Service Pack 1 则需下载安装Windows 7 和 Windows Server 2008 R2 Service Pack 1 (KB976932)补丁，否则无法安装 Code Composer Studio
-					    下载地址：[https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=5842](https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=5842)
+windows 7如果不是Service Pack 1 则需下载安装Windows 7 和 Windows Server 2008 R2 Service Pack 1 (KB976932)补丁，否则无法安装 Code Composer Studio
+下载地址：[https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=5842](https://www.microsoft.com/zh-cn/download/confirmation.aspx?id=5842)
 
-					    ![](http://image.3001.net/images/20160907/14732297441519.png)
+![](http://image.3001.net/images/20160907/14732297441519.png)
 
-					    ![](http://image.3001.net/images/20160907/14732320781614.png)
+![](http://image.3001.net/images/20160907/14732320781614.png)
 
 ### 0x06 refer
 
-					    [Michael Ossmann: Software Defined Radio with HackRF, Lesson 11: Replay YouTuBe https://www.youtube.com/watch?v=CyYteFiIozM ](Michael Ossmann: Software Defined Radio with HackRF, Lesson 11: Replay YouTuBe https://www.youtube.com/watch?v=CyYteFiIozM)
+[Michael Ossmann: Software Defined Radio with HackRF, Lesson 11: Replay YouTuBe https://www.youtube.com/watch?v=CyYteFiIozM ](Michael Ossmann: Software Defined Radio with HackRF, Lesson 11: Replay YouTuBe https://www.youtube.com/watch?v=CyYteFiIozM)
 
-					    [TI eZ430-Chronos Hacking quickstart http://timgray.blogspot.jp/2012/12/ti-ez430-chronos-hacking-quickstart.html](TI eZ430-Chronos Hacking quickstart http://timgray.blogspot.jp/2012/12/ti-ez430-chronos-hacking-quickstart.html)
+[TI eZ430-Chronos Hacking quickstart http://timgray.blogspot.jp/2012/12/ti-ez430-chronos-hacking-quickstart.html](TI eZ430-Chronos Hacking quickstart http://timgray.blogspot.jp/2012/12/ti-ez430-chronos-hacking-quickstart.html)
 
 
 
-					    [The hackable watch: a wearable MSP430 MCU  http://www.itopen.it/the-hackable-watch-a-wearable-msp430-mcu/](The hackable watch: a wearable MSP430 MCU  http://www.itopen.it/the-hackable-watch-a-wearable-msp430-mcu/)
+[The hackable watch: a wearable MSP430 MCU  http://www.itopen.it/the-hackable-watch-a-wearable-msp430-mcu/](The hackable watch: a wearable MSP430 MCU  http://www.itopen.it/the-hackable-watch-a-wearable-msp430-mcu/)
 
-					    [You can ring my bell! Adventures in sub-GHz RF land...  http://adamsblog.aperturelabs.com/2013/03/you-can-ring-my-bell-adventures-in-sub.html?m=1](You can ring my bell! Adventures in sub-GHz RF land...  http://adamsblog.aperturelabs.com/2013/03/you-can-ring-my-bell-adventures-in-sub.html?m=1)
+[You can ring my bell! Adventures in sub-GHz RF land...  http://adamsblog.aperturelabs.com/2013/03/you-can-ring-my-bell-adventures-in-sub.html?m=1](You can ring my bell! Adventures in sub-GHz RF land...  http://adamsblog.aperturelabs.com/2013/03/you-can-ring-my-bell-adventures-in-sub.html?m=1)
 
-					    [TI EZ430 Chronos watch, quick guide / tutorial to hacking the firmware  https://www.youtube.com/watch?v=20dVNyJ8fYw&feature=youtu.be](TI EZ430 Chronos watch, quick guide / tutorial to hacking the firmware  https://www.youtube.com/watch?v=20dVNyJ8fYw&feature=youtu.be)
+[TI EZ430 Chronos watch, quick guide / tutorial to hacking the firmware  https://www.youtube.com/watch?v=20dVNyJ8fYw&feature=youtu.be](TI EZ430 Chronos watch, quick guide / tutorial to hacking the firmware  https://www.youtube.com/watch?v=20dVNyJ8fYw&feature=youtu.be)
 
 ###Author:[雪碧0xroot](http://www.0xroot.cn) @[漏洞盒子安全团队 VULBOX Security Team](https://www.vulbox.com/)  
-
 
